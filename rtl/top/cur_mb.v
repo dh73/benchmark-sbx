@@ -210,6 +210,7 @@ mem_lipo_1p  cmb_buf_1 (
 // -------------------------------------------------------
 //                   CMB LOAD Pixel Simulator
 // -------------------------------------------------------
+`ifdef SIM
 localparam          YUV_FILE   = "./tv/cur_mb_p32.dat";
 localparam          IMODE_FILE = "./tv/intra_mode.dat";
 reg [`PIXEL_WIDTH*32-1:0]   scan_pixel_32;
@@ -435,6 +436,6 @@ always @(posedge clk) begin
   end
 end
 
-
+`endif
 
 endmodule

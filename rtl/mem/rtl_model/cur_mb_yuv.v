@@ -94,6 +94,7 @@ module cur_mb_yuv (
     .b_rdata_o  ( cur_data_o     )
     );
 
+ `ifdef SIM
   reg      [`PIXEL_WIDTH*32-1:0]   scan_pixel_32 ;
   integer                          i             ;
   integer                          fp_input      ;
@@ -194,5 +195,5 @@ module cur_mb_yuv (
       #10 done_o <= 1'b0;
     end
   end
-
+  `endif
 endmodule
