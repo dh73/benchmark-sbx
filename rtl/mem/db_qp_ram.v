@@ -79,7 +79,7 @@ always @(posedge clk) begin
 	if (!cen_i && wen_i)
 		data_r <= mem_array[addr_i];
 	else
-		data_r <= 'bx;
+		data_r <= data_r;
 end
 
 assign data_o = oen_i ? 'bz : data_r;

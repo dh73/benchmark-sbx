@@ -384,7 +384,7 @@ ram_frame_row_32x480  u_fram_ram(
 		    .dataa_o (),
 		    .dataa_i (w_data_frame_w),
 
-				.clkb    (clk),
+				//.clkb    (clk),
 				.cenb_i  (~cena_frame_w),
 				.oenb_i  (1'b0),
 				.wenb_i  (1'b1),
@@ -402,7 +402,7 @@ ram_lcu_row_32x64 u_row_ram(
 		    .dataa_o (),
 		    .dataa_i (w_data_row_w),
 
-				.clkb    (clk),
+				//.clkb    (clk),
 				.cenb_i  (~cena_row_w),
 				.oenb_i  (1'b0),
 				.wenb_i  (1'b1),
@@ -420,7 +420,7 @@ ram_lcu_column_32x64 u_column_ram_0(                                            
 		    .dataa_o (),
 		    .dataa_i (w_data_col_w),
 
-				.clkb    (clk),
+				//.clkb    (clk),
 				.cenb_i  (~cena_col_w),
 				.oenb_i  (1'b0),
 				.wenb_i  (1'b1),
@@ -438,7 +438,7 @@ ram_lcu_column_32x64 u_column_ram_0(                                            
     .dataa_o  (                     ),
     .dataa_i  ( w_data_col_w        ),
 
-    .clkb     ( clk                 ),
+    //.clkb     ( clk                 ),
     .cenb_i   ( ~cena_col_w         ),
     .oenb_i   ( 1'b0                ),
     .wenb_i   ( 1'b1                ),
@@ -459,7 +459,7 @@ ram_lcu_column_32x64 u_column_ram_0(                                            
     .dataa_o  (                     ),
     .dataa_i  ( w_data_col_w        ),
 
-    .clkb     ( clk                 ),
+    //.clkb     ( clk                 ),
     .cenb_i   ( ~cena_col_w         ),
     .oenb_i   ( 1'b0                ),
     .wenb_i   ( 1'b1                ),
@@ -479,7 +479,7 @@ ram_frame_row_32x480  u_fram_ram_u(
 		    .dataa_o (),
 		    .dataa_i (w_data_frame_w),
 
-				.clkb    (clk),
+				//.clkb    (clk),
 				.cenb_i  (~cena_frame_w),
 				.oenb_i  (1'b0),
 				.wenb_i  (1'b1),
@@ -497,7 +497,7 @@ ram_lcu_row_32x64 u_row_ram_u(
 		    .dataa_o (),
 		    .dataa_i (w_data_row_w),
 
-				.clkb    (clk),
+				//.clkb    (clk),
 				.cenb_i  (~cena_row_w),
 				.oenb_i  (1'b0),
 				.wenb_i  (1'b1),
@@ -515,7 +515,7 @@ ram_lcu_column_32x64 u_column_ram_0_u(                                          
 		    .dataa_o (),
 		    .dataa_i (w_data_col_w),
 
-				.clkb    (clk),
+				//.clkb    (clk),
 				.cenb_i  (~cena_col_w),
 				.oenb_i  (1'b0),
 				.wenb_i  (1'b1),
@@ -533,7 +533,7 @@ ram_lcu_column_32x64 u_column_ram_0_u(                                          
     .dataa_o  (                     ),
     .dataa_i  ( w_data_col_w        ),
 
-    .clkb     ( clk                 ),
+    //.clkb     ( clk                 ),
     .cenb_i   ( ~cena_col_w         ),
     .oenb_i   ( 1'b0                ),
     .wenb_i   ( 1'b1                ),
@@ -554,7 +554,7 @@ ram_lcu_column_32x64 u_column_ram_0_u(                                          
     .dataa_o  (                     ),
     .dataa_i  ( w_data_col_w        ),
 
-    .clkb     ( clk                 ),
+    //.clkb     ( clk                 ),
     .cenb_i   ( ~cena_col_w         ),
     .oenb_i   ( 1'b0                ),
     .wenb_i   ( 1'b1                ),
@@ -574,7 +574,7 @@ ram_frame_row_32x480  u_fram_ram_v(
 		    .dataa_o (),
 		    .dataa_i (w_data_frame_w),
 
-				.clkb    (clk),
+				//.clkb    (clk),
 				.cenb_i  (~cena_frame_w),
 				.oenb_i  (1'b0),
 				.wenb_i  (1'b1),
@@ -592,7 +592,7 @@ ram_lcu_row_32x64 u_row_ram_v(
 		    .dataa_o (),
 		    .dataa_i (w_data_row_w),
 
-				.clkb    (clk),
+				//.clkb    (clk),
 				.cenb_i  (~cena_row_w),
 				.oenb_i  (1'b0),
 				.wenb_i  (1'b1),
@@ -610,7 +610,7 @@ ram_lcu_column_32x64 u_column_ram_0_v(                                          
 		    .dataa_o (),
 		    .dataa_i (w_data_col_w),
 
-				.clkb    (clk),
+				//.clkb    (clk),
 				.cenb_i  (~cena_col_w),
 				.oenb_i  (1'b0),
 				.wenb_i  (1'b1),
@@ -628,7 +628,7 @@ ram_lcu_column_32x64 u_column_ram_0_v(                                          
     .dataa_o  (                     ),
     .dataa_i  ( w_data_col_w        ),
 
-    .clkb     ( clk                 ),
+    //.clkb     ( clk                 ),
     .cenb_i   ( ~cena_col_w         ),
     .oenb_i   ( 1'b0                ),
     .wenb_i   ( 1'b1                ),
@@ -649,7 +649,7 @@ ram_lcu_column_32x64 u_column_ram_0_v(                                          
     .dataa_o  (                     ),
     .dataa_i  ( w_data_col_w        ),
 
-    .clkb     ( clk                 ),
+   //.clkb     ( clk                 ),
     .cenb_i   ( ~cena_col_w         ),
     .oenb_i   ( 1'b0                ),
     .wenb_i   ( 1'b1                ),

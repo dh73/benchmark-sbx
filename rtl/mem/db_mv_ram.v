@@ -97,22 +97,22 @@ always @(posedge clka) begin
 	if (!cena_i && wena_i)
 		dataa_r <= mem_array[addra_i];
 	else
-		dataa_r <= 'bx;
+		dataa_r <= dataa_r;
 end
 
 assign dataa_o = rena_i ? 'bz : dataa_r;
 
 // -- B Port --//
-always @(posedge clkb) begin                
+always @(posedge clka) begin                
 	if(!cenb_i && !wenb_i) 
 		mem_array[addrb_i] <= datab_i;
 end
 
-always @(posedge clkb) begin   
+always @(posedge clka) begin   
 	if (!cenb_i && wenb_i)
 		datab_r <= mem_array[addrb_i];
 	else
-		datab_r <= 'bx;
+		datab_r <= datab_r;
 end
 
 assign datab_o = renb_i ? 'bz : datab_r;

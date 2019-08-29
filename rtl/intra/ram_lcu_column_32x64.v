@@ -25,7 +25,7 @@ module ram_lcu_column_32x64 (
 		        addra_i ,
 		        dataa_o ,
 		        dataa_i ,
-				clkb    ,     
+				//clkb    ,     
 				cenb_i  ,   
 				oenb_i  ,   
 				wenb_i  ,   
@@ -57,7 +57,7 @@ input   [Word_Width-1:0]  dataa_i;   // data input
 output	[Word_Width-1:0]  dataa_o;   // data output
 
 // B Port
-input                     clkb;      // clock input                     
+//input                     clkb;      // clock input                     
 input   		          cenb_i;    // chip enable, low active         
 input   		          oenb_i;    // data output enable, low active  
 input   		          wenb_i;    // write enable, low active        
@@ -95,22 +95,22 @@ always @(posedge clka) begin
 	if (!cena_i && wena_i)
 		dataa_r <= mem_array[addra_i];
 	else
-		dataa_r <= 'bx;
+		dataa_r <= dataa_r;
 end
 
 assign dataa_o = oena_i ? 'bz : dataa_r;
 
 // -- B Port --//
-always @(posedge clkb) begin                
+always @(posedge clka) begin                
 	if(!cenb_i && !wenb_i) 
 		mem_array[addrb_i] <= datab_i;
 end
 
-always @(posedge clkb) begin   
+always @(posedge clka) begin   
 	if (!cenb_i && wenb_i)
 		datab_r <= mem_array[addrb_i];
 	else
-		datab_r <= 'bx;
+		datab_r <= datab_r;
 end
 
 assign datab_o = oenb_i ? 'bz : datab_r;

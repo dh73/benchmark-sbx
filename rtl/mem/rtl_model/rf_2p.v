@@ -80,13 +80,13 @@ always @(posedge clka) begin
 	if (!cena_i)
 		dataa_r <= mem_array[addra_i];
 	else
-		dataa_r <= 'bx;
+		dataa_r <= dataa_r;
 end
 
 assign dataa_o = dataa_r;
 
 // -- B Port --//
-always @(posedge clkb) begin                
+always @(posedge clka) begin                
 	if(!cenb_i && !wenb_i) 
 		mem_array[addrb_i] <= datab_i;
 end
